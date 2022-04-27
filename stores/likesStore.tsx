@@ -1,10 +1,8 @@
 import { createContext, FC, useContext } from "react";
 import { makeAutoObservable } from "mobx";
-import { LikesDbType, PostsDbType } from "./type";
-import { commentsMapper } from "../mappers/commentsMapper";
-import { CommentType, PostType } from "../models";
-import { db } from "../db";
 
+import { LikesDbType } from "./type";
+import { PostType } from "../models";
 class LikesStore {
   likes: LikesDbType = {};
 
@@ -13,7 +11,6 @@ class LikesStore {
   }
 
   setLikes(likes: LikesDbType) {
-    //todo: вынест в константы
     this.likes = {
       ...this.likes,
       ...likes,

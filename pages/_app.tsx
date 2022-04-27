@@ -1,11 +1,10 @@
-import { useEffect, useMemo } from "react";
-import { useRouter } from "next/router";
+import { useMemo } from "react";
 import NextNProgress from "nextjs-progressbar";
 
 import { CommentsProvider, CommentsStore } from "../stores/commentsStore";
+import { LikesProvider, LikesStore } from "../stores/likesStore";
 
 import "./../styles/main.css";
-import { LikesProvider, LikesStore } from "../stores/likesStore";
 
 function MyApp({ Component, pageProps }) {
   const commentsStore = useMemo(() => new CommentsStore(), []);

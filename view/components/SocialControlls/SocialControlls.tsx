@@ -10,15 +10,14 @@ type SocialControllsType = {
   callback: (e: any) => void
 };
 
+const justifyClasses = {
+  center: styles.justifyCenter,
+  left: styles.justifyLeft,
+  right: styles.justifyRight,
+};
+
 export const SocialControlls: FC<SocialControllsType> = observer(
   ({ justify, commentsCount, isLiked, callback }) => {
-    //todo: вынести в общие стили
-    const justifyClasses = {
-      center: styles.justifyCenter,
-      left: styles.justifyLeft,
-      right: styles.justifyRight,
-    };
-
     return (
       <div className={`${styles.wrapper} ${justifyClasses[justify]}`}>
         <div className={styles.controlls}>

@@ -1,4 +1,5 @@
 import Router from "next/router";
+
 import { MainLayout } from "../view/layouts/MainLayout";
 
 export default function About() {

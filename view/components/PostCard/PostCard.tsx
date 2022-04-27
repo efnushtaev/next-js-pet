@@ -1,17 +1,18 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import Image from "next/image";
-
-import styles from "./styles.module.css";
 import { observer } from "mobx-react-lite";
 import Link from "next/link";
+
 import { SocialControlls } from "../SocialControlls/SocialControlls";
 import { useLikesStore } from "../../../stores/likesStore";
-//todo: расставить порядок випмпортах
-//todo: заменить any
+
+import styles from "./styles.module.css";
+import { PostType } from "../../../models";
+
 type PostCardType = {
-  title: any;
-  body: any;
-  postId: any;
+  title: PostType['title'];
+  body: PostType['body'];
+  postId: PostType['id'];
   commentsCount: number;
   picUrl: string;
 };
@@ -23,7 +24,7 @@ export const PostCard: FC<PostCardType> = observer(
     const addLike = likesStore.addLike.bind(likesStore);
     const { likes } = likesStore;
 
-    async function handleLikeClick(e) {
+    async function handleLikeClick(e: Event) {
       e.stopPropagation();
       const response = await fetch(`${process.env.API_URL}/api/likes`, {
         method: "POST",

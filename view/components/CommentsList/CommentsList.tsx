@@ -1,5 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { FC, useMemo } from "react";
+
 import { useCommentsStore } from "../../../stores/commentsStore";
 
 import styles from "./styles.module.css";

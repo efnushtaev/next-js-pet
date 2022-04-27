@@ -1,8 +1,10 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useEffect } from "react";
+
 import { MainLayout } from "../view/layouts/MainLayout";
 import { PostContent } from "../view/components/PostContent";
-import { PostType, CommentType, LikeType } from "../models";
 import { useCommentsStore } from "../stores/commentsStore";
+
+import { PostType, CommentType, LikeType } from "../models";
 
 type PostPropsType = {
   serverPost: PostType;
@@ -26,7 +28,6 @@ const Post: FC<PostPropsType> = ({
   }, [setComments, serverComments]);
 
   if (!serverPost || !serverComments) {
-    //todo: сдклать error page
     return <h3>ERROR</h3>;
   }
 
@@ -50,9 +51,6 @@ export async function getServerSideProps({ params }) {
   const { payload: serverLikes } = await likes.json();
 
   const normalizeLikes = serverLikes[params.id + ""] || false;
-
-  console.log('serverLikes: ', serverLikes)
-  console.log('normalizeLikes: ', normalizeLikes)
 
   return {
     props: {

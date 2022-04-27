@@ -1,10 +1,7 @@
 import { createContext, FC, useContext } from "react";
 import { makeAutoObservable } from "mobx";
-import { CommentsDbType, PostsDbType } from "./type";
-import { commentsMapper } from "../mappers/commentsMapper";
-import { CommentType, PostType } from "../models";
-import { observable, action, makeObservable } from "mobx";
 
+import { CommentType, PostType } from "../models";
 class CommentsStore {
   comments: CommentType[] = [];
 

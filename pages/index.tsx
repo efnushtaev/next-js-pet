@@ -1,13 +1,12 @@
 import { FC, useEffect, useMemo } from "react";
 
 import { MainLayout } from "../view/layouts/MainLayout";
-
-import { CommentType, PostType } from "../models";
 import { useLikesStore } from "../stores/likesStore";
-import { LikesDbType } from "../stores/type";
 import { PostCard } from "../view/components/PostCard";
 import { Divider } from "../view/components/Divider";
-import { db } from "../db";
+
+import { LikesDbType } from "../stores/type";
+import { CommentType, PostType } from "../models";
 
 type IndexType = {
   serverPosts: { comments: CommentType[]; post: PostType }[];
@@ -20,7 +19,6 @@ const Index: FC<IndexType> = ({ serverPosts, serverLikes }) => {
 
   useEffect(() => {
     if (serverLikes) {
-      debugger
       setLikes(serverLikes);
     }
   }, [setLikes, serverLikes]);

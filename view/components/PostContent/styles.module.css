@@ -23,8 +23,6 @@
   justify-content: space-between;
 }
 
-/* todo: цвета в константы */
-
 .textContent p:first-child {
   font-weight: 300;
   font-size: 20px;
@@ -95,7 +93,6 @@
   opacity: .85;
 }
 
-/* todo: вынести в общие */
 .postSection input, .postSection textarea {
   font-family: 'Inter';
   left: -4px;

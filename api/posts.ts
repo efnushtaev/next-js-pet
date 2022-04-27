@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { postsMapper } from "../../mappers/postsMappers";
-import { db } from "./../../db";
+import { postsMapper } from "../mappers/postsMappers";
+import { db } from "../db";
 
 export default function posts(req: NextApiRequest, res: NextApiResponse) {
   async function loadPosts() {

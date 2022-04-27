@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 
 import styles from "./styles.module.css";
 
-export const Header = ({}) => {
+export const Header = () => {
   const { asPath } = useRouter();
 
   return (

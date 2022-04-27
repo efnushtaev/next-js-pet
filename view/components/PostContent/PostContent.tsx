@@ -1,14 +1,15 @@
+import { FC, useState } from "react";
 import { observer } from "mobx-react-lite";
 import Image from "next/image";
 import Link from "next/link";
-import { FC, useEffect, useState } from "react";
+
 import { useCommentsStore } from "../../../stores/commentsStore";
 import { useLikesStore } from "../../../stores/likesStore";
 import { CommentsList } from "../CommentsList";
 import { Divider } from "../Divider";
 import { SocialControlls } from "../SocialControlls";
-import { PostType, CommentType, LikeType } from "./../../../models";
 
+import { PostType, LikeType } from "./../../../models";
 import styles from "./styles.module.css";
 
 type PostContentType = {
@@ -16,9 +17,17 @@ type PostContentType = {
   isLiked: LikeType["checked"];
 };
 
+const initComment = {
+  name: "",
+  email: "",
+  body: "",
+};
+
 export const PostContent: FC<PostContentType> = observer(
   ({ post, isLiked }) => {
     const [isLike, setLike] = useState(isLiked)
+    const [comment, setComment] = useState(initComment);
+
     const commentsStore = useCommentsStore();
     const likesStore = useLikesStore();
 
@@ -26,14 +35,6 @@ export const PostContent: FC<PostContentType> = observer(
 
     const addComment = commentsStore.addComment.bind(commentsStore);
     const addLike = likesStore.addLike.bind(likesStore);
-
-    const initComment = {
-      name: "",
-      email: "",
-      body: "",
-    };
-
-    const [comment, setComment] = useState(initComment);
 
     async function handleAddCommentClick() {
       const newComment = {
@@ -50,7 +51,7 @@ export const PostContent: FC<PostContentType> = observer(
         body: JSON.stringify({ postId: post.id, comment: newComment }),
       });
       const { payload } = await response.json();
-debugger
+
       addComment(payload);
       setComment(initComment)
     }
@@ -73,9 +74,11 @@ debugger
     function handleNameChange(e) {
       setComment((prevState) => ({ ...prevState, name: e.target.value }));
     }
+
     function handleEmailChange(e) {
       setComment((prevState) => ({ ...prevState, email: e.target.value }));
     }
+
     function handleBodyChange(e) {
       setComment((prevState) => ({ ...prevState, body: e.target.value }));
     }
@@ -84,7 +87,6 @@ debugger
       <div className={styles.wrapper}>
         {post ? (
           <>
-            {" "}
             <section className={styles.postSection}>
               <div className={styles.imageWrapper}>
                 <Image
@@ -160,7 +162,7 @@ debugger
             <Divider />
             <section className={styles.commentsSection}>
               <CommentsList />
-            </section>{" "}
+            </section>
           </>
         ) : null}
       </div>
