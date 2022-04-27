@@ -1,0 +1,75 @@
+.title {
+  height: 40px;
+  width: 320px;
+  margin: 0px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  width: calc((100% - 320px)/2);
+  height: 1px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #000000;
+}
+
+.title::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: calc((100% - 320px)/2);
+  height: 1px;
+  margin-top: 20px;
+  margin-right: 20px;
+  background: #000000;
+}
+
+.titleEmpty {
+  margin: 0px;
+  height: 40px;
+}
+
+.titleEmpty::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  margin-top: 20px;
+  background: #000000;
+}
+
+.navWrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navWrapper>a {
+  margin-right: 24px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navWrapper>a:hover {
+  opacity: .7;
+}

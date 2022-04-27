@@ -1,0 +1,133 @@
+.postSection {
+  display: flex;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageWrapper {
+  max-width: 680px;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 1400px) {
+  .imageWrapper {
+    margin-right: 0px;
+  }
+}
+
+.handleWrapper {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* todo: цвета в константы */
+
+.textContent p:first-child {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #0A0A0A;
+}
+
+.textContent p:last-child {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+  letter-spacing: 0.07em;
+  text-transform: capitalize;
+
+  color: #444444;
+}
+
+.socialControlls {
+  margin-top: 20px;
+}
+
+.userDataWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.userDataWrapper label {
+  width: 320px;
+  height: 40px;
+
+}
+
+.newCommentWrapper {
+  margin-top: 32px;
+}
+
+.newCommentWrapper textarea {
+  height: 120px;
+  resize: none
+}
+
+.buttonsGroup {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addCommentBtn {
+  height: 32px;
+  padding: 0 20px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  background: #6F69B6;
+  text-transform: uppercase;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+}
+
+.addCommentBtn:hover {
+  opacity: .85;
+}
+
+/* todo: вынести в общие */
+.postSection input, .postSection textarea {
+  font-family: 'Inter';
+  left: -4px;
+  width: 100%;
+  margin: 0px;
+  margin-top: 4px;
+  padding: 8px 12px;
+  box-sizing: border-box;
+  border: 1px solid #ADADAD;
+  border-radius: 8px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.postSection label {
+  font-size: 12px;
+  color: #444444;
+}
+
+.postSection a {
+  color: #6f69b6
+}
+
+.postSection a:hover {
+  opacity: .65;
+}
+
+.commentsSection {
+  max-width: 1000px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}

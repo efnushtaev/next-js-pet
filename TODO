@@ -1,0 +1,13 @@
+https://jsonplaceholder.typicode.com/
+pictures generate api -- https://picsum.photos/
+
+https://in.pinterest.com/pin/376613587573969983/
+
+
+
+-------TODO----------
+
+-- view\layouts\MainLayout.tsx 
+realized dynamic keyword and content attributes
+
+-- realized users name addition in post (userId)

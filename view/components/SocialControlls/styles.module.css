@@ -1,0 +1,49 @@
+.wrapper {
+  display: flex;
+}
+
+.controlls {
+  display: flex;
+  align-self: center;
+}
+
+.controlls:first-child {
+  margin-right: 16px;
+}
+
+.controlls>span {
+  margin-left: 4px;
+  margin-right: 4px;
+  display: block;
+  line-height: 148%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: #6c6c6c;
+}
+
+.controlls svg {
+  cursor: pointer;
+}
+
+.controlls svg:hover {
+  opacity: .85;
+}
+
+.likeActive {
+  fill: #ff5353
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyLeft {
+  justify-content: left;
+}
+
+.justifyRight {
+  justify-content: right;
+}
