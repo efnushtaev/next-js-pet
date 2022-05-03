@@ -1,7 +1,6 @@
 import { PostType } from "../models";
 
 export function postsMapper(posts: PostType[]) {
-  debugger
   return posts.reduce((acc, post) => {
     return {
       ...acc,
