@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { db } from "../db";
-import { commentsMapper } from "../mappers/commentsMapper";
+import { db } from "../../db";
+import { commentsMapper } from "../../mappers/commentsMapper";
 
 export default function comments(req: NextApiRequest, res: NextApiResponse) {
   const { body, method } = req;

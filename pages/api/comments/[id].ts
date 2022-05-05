@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { db } from "../../db";
+import { db } from "../../../db";
 
 export default function getCommentsById(req: NextApiRequest, res: NextApiResponse) {
   const { query } = req;
