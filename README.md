@@ -1,6 +1,6 @@
 
 ## Getting Started
-Write in a terminal next commands
+For starting an app write in a terminal next commands:
 ```
 docker build -t <image_name> .
 ```
