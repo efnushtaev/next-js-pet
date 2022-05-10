@@ -1,6 +1,14 @@
-
-## Getting Started
-For starting an app write in a terminal next commands:
+## What Is It?
+This is a simple Next JS based app. It represents articles list with adding comments and likes feature. Any article can be open and detailing viewed.
+## What For It?
+It was created for studying SSR and MobX
+## What Tech Stack?
+* Next JS
+* MobX
+* TypeScript
+* Docker
+## How To Run It?
+For running an app write in a terminal next commands:
 ```
 docker build -t <image_name> .
 ```
