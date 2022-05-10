@@ -1,5 +1,6 @@
 
 ## Getting Started
+Write in a terminal next commands
 ```
 docker build -t <image_name> .
 ```
