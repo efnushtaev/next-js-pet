@@ -89,14 +89,14 @@ export const PostContent: FC<PostContentType> = observer(
           <>
             <section className={styles.postSection}>
               <div className={styles.imageWrapper}>
-                <Image
+               {post.bigPicUrl && <Image
                   src={post.bigPicUrl}
                   alt="Picture of the author"
                   width={680}
                   height={500}
                   blurDataURL={post.bigPicUrl}
                   placeholder="blur"
-                />
+                />}
               </div>
               <div className={styles.handleWrapper}>
                 <div className={styles.content}>
