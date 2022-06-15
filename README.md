@@ -1,7 +1,7 @@
 ## What Is It?
-This is a simple Next JS based app. It represents articles list with adding comments and likes feature. Any article can be open and detailing viewed.
+This is a simple Next JS based app. It is represents articles list with adding comments and likes feature. Any article can be opened and detailing viewed.
 ## What For It?
-It was created for studying SSR and MobX
+It was created for learning SSR and MobX
 ## What Tech Stack?
 * Next JS
 * MobX
